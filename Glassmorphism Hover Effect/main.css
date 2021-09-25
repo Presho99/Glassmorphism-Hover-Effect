@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #171a21;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+}
+
+.goal {
+  width: 60px;
+  height: 60px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ff0035;
+  font-size: 23px;
+  margin: 0 20px;
+}
+
+.work-out:before,
+.code:before,
+.read:before,
+.hike:before,
+.save:before,
+.pray:before {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.3) 49%,
+    rgba(255, 255, 255, 0.5) 50%
+  );
+}
+
+.goal:before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  position: absolute;
+  background-size: 300%;
+  transition: background-position 0.55s;
+}
+
+.goal:hover,
+.goal:active,
+.goal:focus {
+  transform: translateY(-16px);
+  padding-bottom: 32px;
+  transition: padding-bottom 0.55s;
+}
+
+.goal:hover:before,
+.goal:active:before,
+.goal:focus:before {
+  background-position: top right;
+}
